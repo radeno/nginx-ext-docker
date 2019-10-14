@@ -52,8 +52,8 @@ RUN set -x \
   --with-zlib=/tmp/zlib \
   --add-module=/tmp/ngx_brotli \
   # --add-module=/tmp/headers-more-nginx-module \
-  --with-openssl-opt="zlib no-tests enable-ec_nistp_64_gcc_128" \
-  --with-cc-opt="-O3 -flto -fPIC -fPIE -fstack-protector-strong -Wformat -Werror=format-security -Wno-deprecated-declarations -Wno-strict-aliasing" \
+  --with-openssl-opt="zlib no-tests enable-ec_nistp_64_gcc_128 -DCFLAGS='-march=native -O3 -flto'" \
+  --with-cc-opt="-O3 -march=native -flto -fPIC -fPIE -fstack-protector-strong -Wformat -Werror=format-security -Wno-deprecated-declarations -Wno-strict-aliasing" \
   && make \
   && make install \
   && apk del .build-deps \
