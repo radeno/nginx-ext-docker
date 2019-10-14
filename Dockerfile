@@ -57,6 +57,7 @@ RUN set -x \
   && make \
   && make install \
   && apk del .build-deps \
+  && mkdir -p /var/cache/nginx \
   && cd / && rm -rf /tmp/*
 
 STOPSIGNAL SIGTERM
