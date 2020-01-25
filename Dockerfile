@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-ENV NGINX_VERSION 1.17.7
+ENV NGINX_VERSION 1.17.8
 
 # https://github.com/centminmod/centminmod/tree/master/patches/nginx
 
