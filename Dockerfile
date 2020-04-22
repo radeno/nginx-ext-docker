@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
-ENV NGINX_VERSION 1.17.9
+ENV NGINX_VERSION 1.18.0
 
 # https://github.com/centminmod/centminmod/tree/master/patches/nginx
 
